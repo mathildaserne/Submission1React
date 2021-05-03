@@ -1,11 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export const Uppgift2 = () => {
+
+	const [firstValue, updatedValue] = useState('MathildaS')
+
 	return (
 		<div>
 			<h1>Uppgift 2</h1>
-			<h2>(värdet av ditt state skall synas i denna tag)</h2>
-			<input placeholder="Denna input skall uppdatera värdet som matas in till ditt state" />
+			<h2>(värdet av ditt state skall synas i denna tag) {firstValue}</h2>
+			<input onChange={event => updatedValue(event.target.value)}/>
 		</div>
 	)
 }
