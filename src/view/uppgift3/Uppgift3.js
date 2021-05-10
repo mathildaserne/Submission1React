@@ -1,5 +1,6 @@
-import axios from 'axios'
+import Axios from 'axios'
 import React, {useState, useEffect} from 'react'
+import { Switch } from 'react-router'
 import StarwarsService from '../../shared/api/service/StarwarsService'
 
 export const Uppgift3 = () => {
@@ -11,13 +12,18 @@ export const Uppgift3 = () => {
 
 	const getCharacterNameFromStarwarsAPI = async () => {
 		const { data } = await StarwarsService.getStarwarsCharacter(count)
+		setCharacter(data)
 
 	}
 
+	useEffect (() => {
+        getCharacterNameFromStarwarsAPI()
+    }, [])
+
 	const buttons = () => {
 		return <div>
-			<button onClick={() => setCount(count + 1)}>Increment {count}</button> <br />
-			<button onClick={() => setCount(count - 1)}>Decrement {count}</button>
+			<button onClick={() => setCount(count + 1)}>Increment {count} </button> <br />
+			<button onClick={() => setCount(count - 1)}>Decrement {count}</button> <br/>
 		</div>
 	}
 
