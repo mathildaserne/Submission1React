@@ -5,8 +5,6 @@ export const Uppgift1 = () => {
 	return (
 		<div>
 			<Introduktion name='Mathilda' lastName='Serneblad' course='DotNet20'/>
-			<h1>Hello </h1>
-			<h1>Uppgift 1</h1>
 		</div>
 	)
 }

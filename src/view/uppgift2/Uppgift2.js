@@ -6,7 +6,6 @@ export const Uppgift2 = () => {
 
 	return (
 		<div>
-			<h1>Uppgift 2</h1>
 			<h2>(värdet av ditt state skall synas i denna tag) {firstValue}</h2>
 			<input onChange={event => updatedValue(event.target.value)}/>
 		</div>
